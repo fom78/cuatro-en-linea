@@ -8,6 +8,8 @@ import { WinnerModal } from './components/WinnerModal.jsx'
 import { saveGameToStorage, resetGameStorage } from './logic/storage/index.js'
 
 function App () {
+  
+
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
     if (boardFromStorage) return JSON.parse(boardFromStorage)
@@ -63,6 +65,7 @@ function App () {
     })
   }
 
+  
   return (
     <main className='board'>
       <h1>4 en linea</h1>
@@ -76,7 +79,7 @@ function App () {
                 index={index}
                 updateBoard={updateBoard}
               >
-                {square}{index}
+                {square}
               </Square>
             )
           })
